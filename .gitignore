@@ -1,0 +1,15 @@
+# Large/raw datasets (do not track)
+Datasets/
+
+# Generated outputs and model artifacts
+parsed/
+
+# Python cache
+__pycache__/
+*.pyc
+
+# Jupyter checkpoints
+.ipynb_checkpoints/
+
+# macOS
+.DS_Store

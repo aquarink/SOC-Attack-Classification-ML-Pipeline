@@ -1,0 +1,27 @@
+=== Analyzing Labeled Dataset Folder ===
+File: fox_wazuh_labeled.json | Total rows: 462523 | Labels: {'normal': 50283, 'dnsteal': 381, 'network_scans': 323, 'service_scans': 140, 'wpscan': 4749, 'dirb': 406083, 'cracking': 554, 'privilege_escalation': 10}
+File: harrison_wazuh_labeled.json | Total rows: 583754 | Labels: {'normal': 161774, 'network_scans': 296, 'service_scans': 769, 'wpscan': 4848, 'dirb': 411477, 'webshell': 31, 'cracking': 1251, 'reverse_shell': 19, 'privilege_escalation': 49, 'service_stop': 4, 'dnsteal': 3236}
+File: russellmitchell_wazuh_labeled.json | Total rows: 41488 | Labels: {'normal': 32951, 'network_scans': 8, 'service_scans': 167, 'dirb': 4459, 'wpscan': 3172, 'webshell': 4, 'cracking': 10, 'privilege_escalation': 6, 'dnsteal': 711}
+File: santos_wazuh_labeled.json | Total rows: 126513 | Labels: {'normal': 116944, 'dnsteal': 831, 'network_scans': 104, 'service_scans': 90, 'dirb': 4459, 'wpscan': 3274, 'webshell': 13, 'cracking': 773, 'reverse_shell': 3, 'privilege_escalation': 22}
+File: shaw_wazuh_labeled.json | Total rows: 68539 | Labels: {'normal': 62573, 'dnsteal': 105, 'network_scans': 3, 'service_scans': 1, 'wpscan': 729, 'dirb': 4459, 'cracking': 647, 'reverse_shell': 3, 'privilege_escalation': 19}
+File: wardbeck_wazuh_labeled.json | Total rows: 88204 | Labels: {'normal': 82135, 'dnsteal': 17, 'network_scans': 3, 'service_scans': 56, 'wpscan': 750, 'dirb': 4459, 'webshell': 13, 'cracking': 752, 'reverse_shell': 6, 'privilege_escalation': 13}
+File: wheeler_wazuh_labeled.json | Total rows: 603939 | Labels: {'normal': 182958, 'dnsteal': 461, 'network_scans': 643, 'service_scans': 141, 'dirb': 413009, 'wpscan': 6670, 'webshell': 8, 'reverse_shell': 24, 'privilege_escalation': 25}
+File: wilson_wazuh_labeled.json | Total rows: 625303 | Labels: {'normal': 193121, 'dnsteal': 2861, 'network_scans': 190, 'service_scans': 171, 'dirb': 424350, 'wpscan': 3247, 'webshell': 40, 'cracking': 1284, 'reverse_shell': 17, 'privilege_escalation': 22}
+
+
+=== Analyzing Formatted JSON ===
+Total elements: 738
+Rule ID distribution: {'591': 5, '652': 35, '5710': 202, '651': 431, '31101': 27, '23502': 12, '2833': 4, '11': 1, '5762': 2, '5740': 1, '31303': 2, '5715': 3, '5501': 7, '5402': 2, '5502': 4}
+Rule description distribution (top 15): {'Host Blocked by firewall-drop Active Response': 431, 'sshd: Attempt to login using a non-existent user': 202, 'Host Unblocked by firewall-drop Active Response': 35, 'Web server 400 error code.': 27, 'PAM: Login session opened.': 7, 'Log file rotated.': 5, "Root's crontab entry changed.": 4, 'PAM: Login session closed.': 4, 'sshd: authentication success.': 3, 'sshd: connection reset': 2, 'Nginx critical message.': 2, 'Successful sudo to ROOT executed.': 2, 'The CVE-2025-24528 that affected libgssapi-krb5-2 was solved due to an update in the agent or feed.': 1, 'The CVE-2024-26458 that affected libgssapi-krb5-2 was solved due to an update in the agent or feed.': 1, 'The CVE-2024-26461 that affected libgssapi-krb5-2 was solved due to an update in the agent or feed.': 1}
+Groups distribution: {'ossec': 471, 'active_response': 466, 'syslog': 225, 'sshd': 208, 'authentication_failed': 202, 'invalid_login': 202, 'web': 29, 'accesslog': 27, 'attack': 27, 'vulnerability-detector': 12, 'cron': 4, 'stats': 1, 'nginx': 2, 'authentication_success': 10, 'pam': 11, 'sudo': 2}
+Keyword-based classification (with true/false positive output): {'other (False Positive)': 499, 'other (True Positive)': 239}
+
+
+=== Analyzing Large alerts.json (Sampling first 100,000 rows for rule distribution) ===
+Scanned 100000 rows in alerts.json
+Rule ID distribution: {'510': 54493, '31101': 27711, '31516': 6116, '31410': 3726, '31301': 2608, '31122': 2148, '31151': 1343, '31302': 462, '30305': 451, '591': 401, '30411': 163, '17101': 64, '533': 39, '5502': 39, '31162': 26}
+Rule description distribution (top 15): {'Host-based anomaly detection event (rootcheck).': 54493, 'Web server 400 error code.': 27711, 'Suspicious URL access.': 6116, 'PHP Warning message.': 3726, 'Nginx error message.': 2608, 'Web server 500 error code (Internal Error).': 2148, 'Multiple web server 400 error codes from same source ip.': 1343, 'Nginx warning message.': 462, 'Apache: Attempt to access forbidden file or directory.': 451, 'Log file rotated.': 401, 'ModSecurity: Rejected a query': 163, 'Successful login during non-business hours.': 64, 'Listened ports status (netstat) changed (new port opened or closed).': 39, 'PAM: Login session closed.': 39, 'Multiple web server 500 error code (Internal Error).': 26}
+Groups distribution (top 15): {'ossec': 54941, 'rootcheck': 54493, 'web': 41116, 'attack': 33878, 'accesslog': 31276, 'appsec': 6150, 'apache': 4346, 'nginx': 3070, 'system_error': 2174, 'web_scan': 1343, 'recon': 1343, 'access_denied': 451, 'modsecurity': 163, 'syslog': 86, 'policy_violation': 64}
+Keyword-based classification: {'other': 99999, 'dos_ddos': 1}
+
+
