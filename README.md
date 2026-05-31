@@ -42,7 +42,7 @@ python3 -m pip install --user pandas scikit-learn joblib matplotlib
 Masuk ke folder project:
 
 ```bash
-cd "/Volumes/SSD 850/PROJECTS/soc"
+cd <folder-project-kamu>
 ```
 
 ### Opsi A - All Sources (direkomendasikan)
@@ -110,4 +110,3 @@ Atau pakai cell command:
 4. Feature engineering.
 5. Train/test split.
 6. Training RandomForest + evaluasi (accuracy, precision, recall, f1, confusion matrix).
-
